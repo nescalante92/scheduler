@@ -1,17 +1,29 @@
+/*the root controls main color change, code cite:https://www.youtube.com/watch?v=riDzcEQbX6k (min=5:50)*/
+:root {
+  --hue-past: 0;/*wrong*/
+  --hue-present: 200;/*neutral*/
+  --hue-future: 145;/*correct*/
+}
+
+
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
   }
-  
+  /*hue variable allows color change, code cite:https://www.youtube.com/watch?v=riDzcEQbX6k (min=5:50)*/
   textarea{
-    background: transparent;
+    --hue: var(--hue-neutral);
+    background-color: hsl(var(--hue),100%, 20%);
     border: none;
     resize: none;
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
+    width: 50vw;
   }
+
   
   .jumbotron {
     text-align: center;
@@ -32,29 +44,39 @@ body {
   
   .row {
     white-space: pre-wrap;
-    height: 80px;
-    border-top: 1px solid white;;
+    height: 50px;
   }
-  
+  td{
+    margin-top:5px;
+    margin-bottom: 5px;
+    width:5px;
+
+
+  }
   .hour {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
   }
   
-  .past {
-    background-color: #d3d3d3;
+  /*td hue var gives each color change a clas to indicate when to switch*/
+  
+  td.past {/*wrong=red*/
+    background-color: grey;
     color: white;
+    /*--hue: var(--hue-past;*/
   }
   
-  .present {
-    background-color: #ff6961;
+  td.present {/*neutral=grey*/
+    background-color:#d3d3d3;
     color: white;
+    /*--hue: var(--hue-present;*/
   }
   
-  .future {
-    background-color: #77dd77;
+  td.future {/*correct=green*/
+    background-color: rgb(10, 69, 124);
     color: white;
+    /*--hue: var(--hue-future;*/
   }
   
   .saveBtn {
@@ -63,9 +85,14 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
+    height:3vw;
+    width:5vw;
+    
   }
   
-  .saveBtn i:hover {
+  .saveBtn:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
+    color:white;
+    background-color: rgb(16, 117, 156);
   }
