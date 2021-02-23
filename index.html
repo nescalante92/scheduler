@@ -5,9 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
@@ -23,97 +21,121 @@
   </header>
   <form>
     <div class="container">
-      <!-- Timeblocks go here -->
-      <table class="table">
-        <thead class="col">
-          <div class="form-group">
-            <label for="label"></label>
-            <tr>
-              <th scope="col">Time</th>
-              <th scope="col">Task</th>
-              <th scope="col">Confirm</th>
-            </tr>
-            <tr>
-              <th scope="row">9AM</th>
-              <td class="past"><textarea id="textarea"  name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">10AM</th>
-              <td class="present"><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">11AM</th>
-              <td class="future"><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">12PM</th>
-              <td><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">1PM</th>
-              <td><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">2PM</th>
-              <td><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">3PM</th>
-              <td><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">4PM</th>
-              <td><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">5PM</th>
-              <td><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">6PM</th>
-              <td><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">7PM</th>
-              <td><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-            
-            <tr>
-              <th scope="row">8PM</th>
-              <td><textarea id="textarea" name="text"></textarea></td>
-              <td><button input type="submit" class="saveBtn">Save</button></td>
-            </tr>
-          </div>
+      <div class="hour">
+          <!-- Timeblocks go here -->
+        <table class="table">
+          <thead class="col">
+            <div class="form-group">
+              <label for="label"></label>
+
+              <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Task</th>
+                <th scope="col">Confirm</th>
+              </tr>
+              <tr>
+                <!-----Use 24 clock in backend time(research event delegation)----->
+                <th scope="row">9AM</th>
+                <td><textarea class="9AM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">10AM</th>
+                <td><textarea class="10AM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">11AM</th>
+                <td><textarea class="11AM"id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">12PM</th>
+                <td><textarea class="12PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">1PM</th>
+                <td><textarea class="13PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">2PM</th>
+                <td><textarea class="14PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">3PM</th>
+                <td><textarea class="15PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">4PM</th>
+                <td><textarea class="16PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">5PM</th>
+                <td><textarea class="17PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">6PM</th>
+                <td><textarea class="18PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">7PM</th>
+                <td><textarea clas="19PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+
+              <tr>
+                <th scope="row">8PM</th>
+                <td><textarea class="20PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+              <tr>
+                <th scope="row">9PM</th>
+                <td><textarea class="21PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+              <tr>
+                <th scope="row">10PM</th>
+                <td><textarea class="22PM"id="textarea22" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+              <tr>
+                <th scope="row">11PM</th>
+                <td><textarea class="23PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+              <tr>
+                <th scope="row">12PM</th>
+                <td><textarea class="24PM" id="textarea" name="text"></textarea></td>
+                <td><button input type="submit" class="saveBtn">Save</button></td>
+              </tr>
+            </div>
           </thread>
-      </table>
+        </table>
+      </div>
     </div>
   </form>
   </div>
-  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> 
   <script src="script.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
 </body>
 
 </html>
